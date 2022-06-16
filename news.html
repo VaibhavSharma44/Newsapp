@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fetch News App</title>
+  <style> 
+  h1 {
+    text-align: center;
+}
+
+ </style>
+</head>
+<body>
+    <h1>NEWS PAGE</h1>
+<h2 id="Headingtitle" style="font-size: xx-large;"></h2>
+<P id="newspera" style="font-size: x-large;"></P>
+<h2 id="Headingtitle2" style="font-size: xx-large;"></h2>
+<P id="newspera2" style="font-size: x-large;"></P>
+<h2 id="Headingtitle3" style="font-size: xx-large;"></h2>
+<P id="newspera3" style="font-size: x-large;"></P>
+<h2 id="Headingtitle4" style="font-size: xx-large;"></h2>
+<P id="newspera4" style="font-size: x-large;"></P>
+<h2 id="Headingtitle5" style="font-size: xx-large;"></h2>
+<P id="newspera5" style="font-size: x-large;"></P>
+<h2 id="Headingtitle6" style="font-size: xx-large;"></h2>
+<P id="newspera6" style="font-size: x-large;"></P>
+<h2 id="Headingtitle7" style="font-size: xx-large;"></h2>
+<P id="newspera7" style="font-size: x-large;"></P>
+<h2 id="Headingtitle8" style="font-size: xx-large;"></h2>
+<P id="newspera8" style="font-size: x-large;"></P>
+
+
+<script>
+    async function getnews(){
+        const response = await fetch('')
+        const data = await response.json();
+        console.log(data);
+
+        document.getElementById('Headingtitle').textContent =  data.articles[0].title
+        document.getElementById('newspera').textContent = data.articles[0].description
+        document.getElementById('Headingtitle2').textContent = data.articles[2].title
+        document.getElementById('newspera2').textContent = data.articles[2].description
+        document.getElementById('Headingtitle3').textContent = data.articles[3].title
+        document.getElementById('newspera3').textContent = data.articles[3].description
+        document.getElementById('Headingtitle4').textContent = data.articles[4].title
+        document.getElementById('newspera4').textContent = data.articles[4].description
+        document.getElementById('Headingtitle5').textContent =  data.articles[5].title
+        document.getElementById('newspera5').textContent = data.articles[5].description
+        document.getElementById('Headingtitle6').textContent = data.articles[6].title
+        document.getElementById('newspera6').textContent = data.articles[6].description
+        document.getElementById('Headingtitle7').textContent = data.articles[7].title
+        document.getElementById('newspera7').textContent = data.articles[7].description
+        document.getElementById('Headingtitle8').textContent = data.articles[8].title
+        document.getElementById('newspera8').textContent = data.articles[8].description
+
+    }
+    getnews()
+</script>
+
+</body>
+</html>
